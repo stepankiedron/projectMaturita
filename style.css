@@ -1,0 +1,355 @@
+
+/*Základní styly*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Světle šedé pozadí */
+    min-height: 100vh; /* Zajistí, že patička je dole */
+    display: flex;
+    flex-direction: column; /* Umožní patičce držet se dole */
+}
+
+/* Hlavní obsah - bude vyplňovat dostupné místo */
+main {
+    flex: 1; 
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Maximální šířka pro centrování */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Modrý pro odkazy */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.info-section {
+    padding: 60px 0;
+}
+
+/*Tlačítka*/
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.1s;
+    border: 2px solid transparent;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.button.primary {
+    background-color: #007bff; /* Modrá */
+    color: white;
+    border-color: #007bff;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.button.cta-button {
+    font-size: 1.1em;
+    padding: 15px 30px;
+}
+
+/* --- 3. Navbar (Header) Styly --- */
+
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    color: #555;
+    padding: 5px 10px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Zajištění, že tlačítko v navbaru zůstane bílé */
+.main-nav .auth-link a.button.primary {
+    color: white; 
+}
+
+/* --- 4. Úvodní Sekce (Hero Section) Styly --- */
+
+.hero-section {
+    background-color: #e0f7fa; 
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Formuláře (Přihlášení/Registrace)*/
+
+.form-container {
+    max-width: 450px; 
+    margin: 50px auto; 
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff; 
+    outline: none;
+}
+
+.form-links {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+.form-links a {
+    font-weight: 600;
+}
+
+/*Katalog Her */
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+    gap: 30px; /* Mezera mezi kartičkami (vodorovně i svisle) */
+    margin-top: 30px;
+}
+
+.game-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    width: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-image-wrapper {
+    width: 100%;
+    padding-top: 100%; 
+    position: relative; /* Klíčové: Kontejner pro absolutně pozicovaný overlay */
+    overflow: hidden;
+}
+
+.game-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s;
+}
+
+/* ------------------------------------- */
+/* STYLY PRO PŘEKRYVNÉ JMENO (OVERLAY) */
+/* ------------------------------------- */
+
+.game-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Tmavá průhledná vrstva */
+    color: white;
+    display: flex;
+    justify-content: center; /* Centrování textu horizontálně */
+    align-items: center; /* Centrování textu vertikálně */
+    opacity: 0; /* Standardně neviditelný */
+    transition: opacity 0.3s ease;
+    padding: 15px;
+    text-align: center;
+}
+
+.game-title-overlay h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    /* Efekt pro zvětšení/zmenšení názvu při hoveru */
+    transform: scale(0.8); 
+    transition: transform 0.3s ease;
+}
+
+/* Zobrazení při najetí myší na celou kartičku */
+.game-card:hover .game-title-overlay {
+    opacity: 1; /* Zobrazí overlay */
+}
+
+/* Zvětšení názvu při najetí myší */
+.game-card:hover .game-title-overlay h3 {
+    transform: scale(1);
+}
+
+/* Jemné zvětšení obrázku, aby efekt vypadal lépe */
+.game-card:hover .game-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Odstranění starých stylů pro .game-info a .game-genre, pokud je již nepotřebujeme */
+/* Tyto styly již nebudou potřeba, protože název je na obrázku
+.game-info { display: none; }
+*/
+
+/*Stránka Hry*/
+
+.detail-content {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.detail-image {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.game-meta {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.detail-content p {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+/*Patička (Footer) Styly*/
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: auto; 
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-nav a {
+    color: #bbb;
+    margin-left: 15px;
+}
+
+.footer-nav a:hover {
+    color: white;
+}
