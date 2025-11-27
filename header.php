@@ -6,24 +6,31 @@
     <title><?php echo $pageTitle ?? 'Katalog Her'; ?> | </title> 
     
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container navbar-content">
-            <a href="index.php" class="logo">
-                <img src="img/" alt="IndieHub">
+<header class="main-header">
+    <div class="container navbar-content">
+
+        <!-- Logo vlevo -->
+        <div class="logo">
+            <a href="index.php" class="Logo">
+                <img src="img/LOGO1.svg" alt="IndieHub">
             </a>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="login.php" class="button primary">Přihlásit se</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
-<main> 
 
+        <!-- Menu vpravo -->
+        <nav class="main-nav">
+                <a href="index.php">Domů</a></li>
+                <a href="index.php#game-catalog">Katalog</a></li>
+                <a href="infogames.php">Co to jsou indie hry</a>
+                <a href="Top.php">Top 10</a>
+                <a href="FAQ.php">FAQ</a>
+                <a href="facts.php">Věděli jste, že...? </a>   
+        </nav>
 
+    </div>
+</header>
 
+<main>

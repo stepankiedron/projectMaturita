@@ -2,7 +2,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <?php echo date("Y"); ?> Maturitní Projekt | Štěpán Kiedroň</p>
+            <p><?php echo date("Y"); ?> Maturitní Projekt | Štěpán Kiedroň</p>
             <nav class="footer-nav">
                 
             </nav>
