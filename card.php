@@ -1,5 +1,5 @@
-<div class="game-card">
-    <a href="hra_detail.php?id=<?php echo $game['id']; ?>">
+<div class="game-card" title="<?php echo $game['title']; ?>">
+    <a href="game_detail.php?id=<?php echo $game['id']; ?>">
         <div class="game-image-wrapper">
             <img src="<?php echo $game['image']; ?>" alt="Obrázek hry <?php echo $game['title']; ?>">
             
@@ -8,5 +8,5 @@
             </div>
 
         </div>
-        </a>
+    </a>
 </div>
