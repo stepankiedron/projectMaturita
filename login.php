@@ -13,23 +13,23 @@ include 'template/header.php';
                 <div class="form-group">
                     <label for="email">E-mailová adresa:</label>
                     <input type="email" id="email" name="email" required 
-                           placeholder="napr. vase.jmeno@skola.cz">
+                    placeholder="např. jannovak@email.cz">
                 </div>
                 
                 <div class="form-group">
                     <label for="password">Heslo:</label>
                     <input type="password" id="password" name="password" required 
-                           placeholder="Zadejte své heslo">
+                    placeholder="Zadejte své heslo">
                 </div>
                 
                 <div class="form-group">
-                    <button type="submit" class="button primary cta-button" style=width: 100%;>
+                    <button type="submit" class="button primary cta-button">
                         Přihlásit se
                     </button>
                 </div>
                 
                 <div class="form-links">
-                    <p>Zapomněli jste <a href="zapomenute_heslo.php">heslo</a>?</p>
+                    <p>Zapomněli jste <a href="forgot_password.php">heslo</a>?</p>
                     <p>Nemáte účet? <a href="registre.php">Zaregistrujte se</a></p>
                 </div>
                 
